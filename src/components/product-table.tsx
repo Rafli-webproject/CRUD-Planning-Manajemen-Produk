@@ -29,11 +29,11 @@ export function ProductTable({ products, onEdit, onDelete }: Props) {
     <div className="overflow-hidden rounded-lg border border-border bg-white shadow-sm">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-border bg-surface text-left">
-            <th className="px-4 py-3 font-medium text-fg">Nama</th>
-            <th className="px-4 py-3 font-medium text-fg">Deskripsi</th>
-            <th className="px-4 py-3 font-medium text-fg">Harga</th>
-            <th className="px-4 py-3 text-right font-medium text-fg">Aksi</th>
+          <tr className="border-b border-border bg-blue-600 text-left">
+            <th className="px-4 py-3 font-medium text-white">Nama</th>
+            <th className="px-4 py-3 font-medium text-white">Deskripsi</th>
+            <th className="px-4 py-3 font-medium text-white">Harga</th>
+            <th className="px-4 py-3 text-right font-medium text-white">Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -46,7 +46,7 @@ export function ProductTable({ products, onEdit, onDelete }: Props) {
                 <div className="flex justify-end gap-2">
                   <button
                     onClick={() => onEdit(p)}
-                    className="rounded-md border border-border bg-white px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:bg-primary-soft hover:border-primary"
+                    className="rounded-md border border-border bg-white px-3 py-1.5 text-xs font-medium text-fg transition-colors hover:bg-surface"
                   >
                     Edit
                   </button>
