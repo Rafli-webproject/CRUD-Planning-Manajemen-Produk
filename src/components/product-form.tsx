@@ -12,7 +12,7 @@ type Props = {
 export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
   const [nama, setNama] = useState(editing?.nama ?? "");
   const [deskripsi, setDeskripsi] = useState(editing?.deskripsi ?? "");
-  const [harga, setHarga] = useState(editing?.harga ?? 0);
+  const [harga, setHarga] = useState(editing ? String(editing.harga) : "");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,7 +25,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
     if (!editing) {
       setNama("");
       setDeskripsi("");
-      setHarga(0);
+      setHarga("");
     }
   }
 
@@ -44,9 +44,9 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
             type="text"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
-            placeholder="Masukkan nama produk"
+            placeholder="Misal: Kopi Susu"
             required
-            className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+            className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
         </div>
 
@@ -55,9 +55,9 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
           <textarea
             value={deskripsi}
             onChange={(e) => setDeskripsi(e.target.value)}
-            placeholder="Masukkan deskripsi produk (opsional)"
+            placeholder="Deskripsi singkat produk (opsional)"
             rows={3}
-            className="mt-1.5 w-full resize-none rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+            className="mt-1.5 w-full resize-none rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
         </div>
 
@@ -68,9 +68,10 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
           <input
             type="number"
             value={harga}
-            onChange={(e) => setHarga(Number(e.target.value))}
+            onChange={(e) => setHarga(e.target.value)}
+            placeholder="0"
             min={0}
-            className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
+            className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
         </div>
 
