@@ -29,7 +29,7 @@ export function ProductTable({ products, onEdit, onDelete }: Props) {
     <div className="overflow-hidden rounded-lg border border-border bg-white shadow-sm">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-border bg-blue-600 text-left">
+          <tr className="border-b border-border bg-fg text-left">
             <th className="px-4 py-3 font-medium text-white">Nama</th>
             <th className="px-4 py-3 font-medium text-white">Deskripsi</th>
             <th className="px-4 py-3 font-medium text-white">Harga</th>
