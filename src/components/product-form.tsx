@@ -57,7 +57,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
             type="text"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
-            placeholder="Misal: Kopi Susu"
+            placeholder="Masukkan nama produk"
             required
             className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
@@ -68,7 +68,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
           <textarea
             value={deskripsi}
             onChange={(e) => setDeskripsi(e.target.value)}
-            placeholder="Deskripsi singkat produk (opsional)"
+            placeholder="Masukkan deskripsi produk (opsional)"
             rows={3}
             className="mt-1.5 w-full resize-none rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
@@ -129,7 +129,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
             </div>
           </div>
           <p className="mt-1 text-xs text-fg-subtle">
-            Klik ▲▼ untuk naik/turun Rp 500
+            Harga dapat diubah dengan nominal 500
           </p>
         </div>
 
