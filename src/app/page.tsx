@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-bg">
-      <div className="mx-auto max-w-3xl px-6 py-12">
+      <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
         <header className="mb-8">
           <h1 className="text-xl font-semibold text-fg">Manajemen Produk</h1>
           <p className="mt-1 text-sm text-fg-muted">

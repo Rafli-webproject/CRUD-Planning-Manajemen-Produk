@@ -43,7 +43,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
   }
 
   return (
-    <div className="rounded-lg border border-border bg-white p-6 shadow-sm">
+    <div className="rounded-lg border border-border bg-white p-4 shadow-sm sm:p-6">
       <h2 className="text-base font-semibold text-fg">
         {editing ? "Edit Produk" : "Tambah Produk Baru"}
       </h2>
@@ -57,7 +57,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
             type="text"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
-            placeholder="Masukkan nama produk"
+            placeholder="Misal: Kopi Susu"
             required
             className="mt-1.5 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
@@ -68,7 +68,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
           <textarea
             value={deskripsi}
             onChange={(e) => setDeskripsi(e.target.value)}
-            placeholder="Masukkan deskripsi produk (opsional)"
+            placeholder="Deskripsi singkat produk (opsional)"
             rows={3}
             className="mt-1.5 w-full resize-none rounded-md border border-border bg-white px-3 py-2 text-sm text-fg placeholder:text-fg-subtle focus:border-fg focus:outline-none"
           />
@@ -101,10 +101,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M5 1L9 7H1L5 1Z"
-                    fill="currentColor"
-                  />
+                  <path d="M5 1L9 7H1L5 1Z" fill="currentColor" />
                 </svg>
               </button>
               <button
@@ -120,23 +117,20 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <path
-                    d="M5 9L1 3H9L5 9Z"
-                    fill="currentColor"
-                  />
+                  <path d="M5 9L1 3H9L5 9Z" fill="currentColor" />
                 </svg>
               </button>
             </div>
           </div>
           <p className="mt-1 text-xs text-fg-subtle">
-            Harga dapat diubah dengan nominal 500
+            Klik ▲▼ untuk naik/turun Rp 500
           </p>
         </div>
 
-        <div className="flex gap-2 pt-1">
+        <div className="flex flex-col gap-2 pt-1 sm:flex-row">
           <button
             type="submit"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
+            className="w-full rounded-md bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-hover sm:w-auto"
           >
             {editing ? "Update" : "Simpan"}
           </button>
@@ -144,7 +138,7 @@ export function ProductForm({ onSubmit, editing, onCancelEdit }: Props) {
             <button
               type="button"
               onClick={onCancelEdit}
-              className="rounded-md border border-border bg-white px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface"
+              className="w-full rounded-md border border-border bg-white px-4 py-2 text-sm font-medium text-fg transition-colors hover:bg-surface sm:w-auto"
             >
               Batal
             </button>
